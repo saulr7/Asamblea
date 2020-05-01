@@ -4,9 +4,8 @@ import './Login.css'
 import Loading from '../common/Loading';
 import CredencialesModel from '../../models/CredencialesModel';
 
-import { SignInService } from '../../services/AuthService';
+import {  SignInService } from '../../services/AuthService';
 import { AlertWarning } from '../../services/AlertService';
-import TipoAutenticacionEnum from '../../enums/Tipoautenticacion';
 
 
 
@@ -14,7 +13,6 @@ const Login : React.FC <{}> = () => {
 
  
     const [usuario, setUsuario]     = useState("")
-    const [codigo]                  = useState(0)
     const [password, setPasswors]   = useState("")
     const [loading, setLoading]     = useState(false)
 
@@ -26,9 +24,8 @@ const Login : React.FC <{}> = () => {
         setLoading(true)
         var model : CredencialesModel = {
                               Usuario : usuario, 
-                              CodeUser : codigo, 
-                              Password : password, 
-                              TipoAutenticacion : TipoAutenticacionEnum.ActiveDirectory}
+                              Password : password,
+                            Uid : ""}
         await SignInService(model)
         setLoading(false)
 

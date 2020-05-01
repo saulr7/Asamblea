@@ -10,7 +10,6 @@ const Aplicaciones : React.FC = ()=> {
     const setFocus                                  = useRef<any>(null)
     const [loading, setLoading]                     = useState(false)
     const [apliaciones, setApliaciones]             = useState<AplicacionModel[]>([])
-    const [Destacadas, setDestacadas]               = useState<AplicacionModel[]>([])
     const [apliacionesLoaded, setApliacionesLoaded] = useState<AplicacionModel[]>([])
 
 
